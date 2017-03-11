@@ -67,7 +67,7 @@ def getRegularizationValues():
     """
     values = None   # Assign a list of floats in the block below
     ### YOUR CODE HERE
-    values = 10 ** np.random.uniform(-5, 5, size=10)
+    values = 10 ** np.random.uniform(-1, 1, size=20)
     ### END YOUR CODE
     return sorted(values)
 

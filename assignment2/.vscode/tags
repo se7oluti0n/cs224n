@@ -1,0 +1,125 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Config	../q1_classifier.py	/^class Config(object):$/;"	kind:class	line:12
+Config	../q2_parser_model.py	/^class Config(object):$/;"	kind:class	line:12
+Config	../utils/parser_utils.py	/^class Config(object):$/;"	kind:class	line:22
+DummyModel	../q2_parser_transitions.py	/^class DummyModel:$/;"	kind:class	line:117
+L_PREFIX	../utils/parser_utils.py	/^L_PREFIX = '<l>:'$/;"	kind:variable	line:16
+Model	../model.py	/^class Model(object):$/;"	kind:class	line:1
+ModelWrapper	../utils/parser_utils.py	/^class ModelWrapper(object):$/;"	kind:class	line:262
+NULL	../utils/parser_utils.py	/^NULL = '<NULL>'$/;"	kind:variable	line:18
+P_PREFIX	../utils/parser_utils.py	/^P_PREFIX = '<p>:'$/;"	kind:variable	line:15
+Parser	../utils/parser_utils.py	/^class Parser(object):$/;"	kind:class	line:37
+ParserModel	../q2_parser_model.py	/^class ParserModel(Model):$/;"	kind:class	line:29
+PartialParse	../q2_parser_transitions.py	/^class PartialParse(object):$/;"	kind:class	line:1
+Progbar	../utils/general_utils.py	/^class Progbar(object):$/;"	kind:class	line:69
+ROOT	../utils/parser_utils.py	/^ROOT = '<ROOT>'$/;"	kind:variable	line:19
+SoftmaxModel	../q1_classifier.py	/^class SoftmaxModel(Model):$/;"	kind:class	line:27
+UNK	../utils/parser_utils.py	/^UNK = '<UNK>'$/;"	kind:variable	line:17
+__init__	../q1_classifier.py	/^    def __init__(self, config):$/;"	kind:member	line:166
+__init__	../q2_parser_model.py	/^    def __init__(self, config, pretrained_embeddings):$/;"	kind:member	line:205
+__init__	../q2_parser_transitions.py	/^    def __init__(self, sentence):$/;"	kind:member	line:2
+__init__	../utils/general_utils.py	/^    def __init__(self, target, width=30, verbose=1):$/;"	kind:member	line:78
+__init__	../utils/parser_utils.py	/^    def __init__(self, dataset):$/;"	kind:member	line:40
+__init__	../utils/parser_utils.py	/^    def __init__(self, parser, dataset, sentence_id_to_idx):$/;"	kind:member	line:263
+__init__.py	../utils/__init__.py	1;"	kind:file	line:1
+_xavier_initializer	../q2_initialization.py	/^    def _xavier_initializer(shape, **kwargs):$/;"	kind:function	line:14
+add	../utils/general_utils.py	/^    def add(self, n, values=[]):$/;"	kind:member	line:167
+add_embedding	../q2_parser_model.py	/^    def add_embedding(self):$/;"	kind:member	line:85
+add_loss_op	../model.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:51
+add_loss_op	../q1_classifier.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:94
+add_loss_op	../q2_parser_model.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:136
+add_placeholders	../model.py	/^    def add_placeholders(self):$/;"	kind:member	line:8
+add_placeholders	../q1_classifier.py	/^    def add_placeholders(self):$/;"	kind:member	line:30
+add_placeholders	../q2_parser_model.py	/^    def add_placeholders(self):$/;"	kind:member	line:36
+add_prediction_op	../model.py	/^    def add_prediction_op(self):$/;"	kind:member	line:43
+add_prediction_op	../q1_classifier.py	/^    def add_prediction_op(self):$/;"	kind:member	line:74
+add_prediction_op	../q2_parser_model.py	/^    def add_prediction_op(self):$/;"	kind:member	line:106
+add_training_op	../model.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:61
+add_training_op	../q1_classifier.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:108
+add_training_op	../q2_parser_model.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:153
+batch_size	../q1_classifier.py	/^    batch_size = 64$/;"	kind:variable	line:22
+batch_size	../q2_parser_model.py	/^    batch_size = 2048$/;"	kind:variable	line:24
+build	../model.py	/^    def build(self):$/;"	kind:member	line:107
+build_dict	../utils/parser_utils.py	/^def build_dict(keys, n_max=None, offset=0):$/;"	kind:function	line:302
+create_feed_dict	../model.py	/^    def create_feed_dict(self, inputs_batch, labels_batch=None):$/;"	kind:member	line:21
+create_feed_dict	../q1_classifier.py	/^    def create_feed_dict(self, inputs_batch, labels_batch=None):$/;"	kind:member	line:50
+create_feed_dict	../q2_parser_model.py	/^    def create_feed_dict(self, inputs_batch, labels_batch=None, dropout=1):$/;"	kind:member	line:59
+create_instances	../utils/parser_utils.py	/^    def create_instances(self, examples):$/;"	kind:member	line:194
+cross_entropy_loss	../q1_softmax.py	/^def cross_entropy_loss(y, yhat):$/;"	kind:function	line:32
+data_path	../utils/parser_utils.py	/^    data_path = '.\/data'$/;"	kind:variable	line:30
+dev_file	../utils/parser_utils.py	/^    dev_file = 'dev.conll'$/;"	kind:variable	line:32
+dropout	../q2_parser_model.py	/^    dropout = 0.5$/;"	kind:variable	line:21
+embed_size	../q2_parser_model.py	/^    embed_size = 50$/;"	kind:variable	line:22
+embedding_file	../utils/parser_utils.py	/^    embedding_file = '.\/data\/en-cw.txt'$/;"	kind:variable	line:34
+extract_features	../utils/parser_utils.py	/^    def extract_features(self, stack, buf, arcs, ex):$/;"	kind:member	line:106
+fit	../q1_classifier.py	/^    def fit(self, sess, inputs, labels):$/;"	kind:member	line:147
+fit	../q2_parser_model.py	/^    def fit(self, sess, saver, parser, train_examples, dev_set):$/;"	kind:member	line:193
+general_utils.py	../utils/general_utils.py	1;"	kind:file	line:1
+get_lc	../utils/parser_utils.py	/^        def get_lc(k):$/;"	kind:function	line:110
+get_minibatches	../utils/general_utils.py	/^def get_minibatches(data, minibatch_size, shuffle=True):$/;"	kind:function	line:6
+get_oracle	../utils/parser_utils.py	/^    def get_oracle(self, stack, buf, ex):$/;"	kind:member	line:166
+get_rc	../utils/parser_utils.py	/^        def get_rc(k):$/;"	kind:function	line:113
+hidden_size	../q2_parser_model.py	/^    hidden_size = 200$/;"	kind:variable	line:23
+language	../utils/parser_utils.py	/^    language = 'english'$/;"	kind:variable	line:23
+legal_labels	../utils/parser_utils.py	/^    def legal_labels(self, stack, buf):$/;"	kind:member	line:228
+load_and_preprocess_data	../utils/parser_utils.py	/^def load_and_preprocess_data(reduced=True):$/;"	kind:function	line:340
+logged_loop	../utils/general_utils.py	/^def logged_loop(iterable, n=None):$/;"	kind:function	line:58
+lowercase	../utils/parser_utils.py	/^    lowercase = True$/;"	kind:variable	line:26
+lr	../q1_classifier.py	/^    lr = 1e-4$/;"	kind:variable	line:24
+lr	../q2_parser_model.py	/^    lr = 0.001$/;"	kind:variable	line:26
+main	../q2_parser_model.py	/^def main(debug=True):$/;"	kind:function	line:211
+minibatch	../utils/general_utils.py	/^def minibatch(data, minibatch_idx):$/;"	kind:function	line:44
+minibatch_parse	../q2_parser_transitions.py	/^def minibatch_parse(sentences, model, batch_size):$/;"	kind:function	line:50
+minibatches	../utils/parser_utils.py	/^def minibatches(data, batch_size):$/;"	kind:function	line:332
+model.py	../model.py	1;"	kind:file	line:1
+n_classes	../q1_classifier.py	/^    n_classes = 5$/;"	kind:variable	line:21
+n_classes	../q2_parser_model.py	/^    n_classes = 3$/;"	kind:variable	line:20
+n_epochs	../q1_classifier.py	/^    n_epochs = 50$/;"	kind:variable	line:23
+n_epochs	../q2_parser_model.py	/^    n_epochs = 10$/;"	kind:variable	line:25
+n_features	../q1_classifier.py	/^    n_features = 100$/;"	kind:variable	line:20
+n_features	../q2_parser_model.py	/^    n_features = 36$/;"	kind:variable	line:19
+n_samples	../q1_classifier.py	/^    n_samples = 1024$/;"	kind:variable	line:19
+parse	../q2_parser_transitions.py	/^    def parse(self, transitions):$/;"	kind:member	line:36
+parse	../utils/parser_utils.py	/^    def parse(self, dataset, eval_batch_size=5000):$/;"	kind:member	line:234
+parse_step	../q2_parser_transitions.py	/^    def parse_step(self, transition):$/;"	kind:member	line:26
+parser_utils.py	../utils/parser_utils.py	1;"	kind:file	line:1
+predict	../q2_parser_transitions.py	/^    def predict(self, partial_parses):$/;"	kind:member	line:122
+predict	../utils/parser_utils.py	/^    def predict(self, partial_parses):$/;"	kind:member	line:268
+predict_on_batch	../model.py	/^    def predict_on_batch(self, sess, inputs_batch):$/;"	kind:member	line:94
+punct	../utils/parser_utils.py	/^def punct(language, pos):$/;"	kind:function	line:312
+q1_classifier.py	../q1_classifier.py	1;"	kind:file	line:1
+q1_softmax.py	../q1_softmax.py	1;"	kind:file	line:1
+q2_initialization.py	../q2_initialization.py	1;"	kind:file	line:1
+q2_parser_model.py	../q2_parser_model.py	1;"	kind:file	line:1
+q2_parser_transitions.py	../q2_parser_transitions.py	1;"	kind:file	line:1
+read_conll	../utils/parser_utils.py	/^def read_conll(in_file, lowercase=False, max_example=None):$/;"	kind:function	line:280
+run_epoch	../q1_classifier.py	/^    def run_epoch(self, sess, inputs, labels):$/;"	kind:member	line:131
+run_epoch	../q2_parser_model.py	/^    def run_epoch(self, sess, parser, train_examples, dev_set):$/;"	kind:member	line:182
+softmax	../q1_softmax.py	/^def softmax(x):$/;"	kind:function	line:6
+test_all_close	../utils/general_utils.py	/^def test_all_close(name, actual, expected):$/;"	kind:function	line:48
+test_cross_entropy_loss_basic	../q1_softmax.py	/^def test_cross_entropy_loss_basic():$/;"	kind:function	line:82
+test_dependencies	../q2_parser_transitions.py	/^def test_dependencies(name, deps, ex_deps):$/;"	kind:function	line:127
+test_file	../utils/parser_utils.py	/^    test_file = 'test.conll'$/;"	kind:variable	line:33
+test_initialization_basic	../q2_initialization.py	/^def test_initialization_basic():$/;"	kind:function	line:34
+test_minibatch_parse	../q2_parser_transitions.py	/^def test_minibatch_parse():$/;"	kind:function	line:134
+test_parse	../q2_parser_transitions.py	/^def test_parse():$/;"	kind:function	line:102
+test_parse_step	../q2_parser_transitions.py	/^def test_parse_step():$/;"	kind:function	line:90
+test_softmax_basic	../q1_softmax.py	/^def test_softmax_basic():$/;"	kind:function	line:62
+test_softmax_model	../q1_classifier.py	/^def test_softmax_model():$/;"	kind:function	line:176
+test_step	../q2_parser_transitions.py	/^def test_step(name, transition, stack, buf, deps,$/;"	kind:function	line:73
+train_file	../utils/parser_utils.py	/^    train_file = 'train.conll'$/;"	kind:variable	line:31
+train_on_batch	../model.py	/^    def train_on_batch(self, sess, inputs_batch, labels_batch):$/;"	kind:member	line:80
+train_on_batch	../q2_parser_model.py	/^    def train_on_batch(self, sess, inputs_batch, labels_batch):$/;"	kind:member	line:176
+unlabeled	../utils/parser_utils.py	/^    unlabeled = True$/;"	kind:variable	line:25
+update	../utils/general_utils.py	/^    def update(self, current, values=[], exact=[]):$/;"	kind:member	line:88
+use_dep	../utils/parser_utils.py	/^    use_dep = True$/;"	kind:variable	line:28
+use_dep	../utils/parser_utils.py	/^    use_dep = use_dep and (not unlabeled)$/;"	kind:variable	line:29
+use_pos	../utils/parser_utils.py	/^    use_pos = True$/;"	kind:variable	line:27
+vectorize	../utils/parser_utils.py	/^    def vectorize(self, examples):$/;"	kind:member	line:92
+with_punct	../utils/parser_utils.py	/^    with_punct = True$/;"	kind:variable	line:24
+xavier_weight_init	../q2_initialization.py	/^def xavier_weight_init():$/;"	kind:function	line:5
