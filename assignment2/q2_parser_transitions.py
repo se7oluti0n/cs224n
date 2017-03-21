@@ -21,6 +21,9 @@ class PartialParse(object):
         self.sentence = sentence
 
         ### YOUR CODE HERE
+        self.stack = ["ROOT"]
+        self.buffer = sentence[:]
+        self.dependencies = []
         ### END YOUR CODE
 
     def parse_step(self, transition):
@@ -31,6 +34,21 @@ class PartialParse(object):
                         and right-arc transitions.
         """
         ### YOUR CODE HERE
+        def shift(s, b, d):
+            s.append(b.pop(0))
+            return s, b, d
+        def left_arc(s, b, d):
+            d.append((s[-1], s[-2]))
+            s.pop(-2)
+
+            return s, b, d
+        def right_arc(s, b, d):
+            d.append((s[-2], s[-1]))
+            s.pop(-1)
+            return s, b, d
+        
+        ops = {"S": shift, "LA": left_arc, "RA": right_arc}
+        self.stack, self.buffer, self.dependencies = ops[transition](self.stack, self.buffer, self.dependencies)
         ### END YOUR CODE
 
     def parse(self, transitions):
@@ -65,6 +83,26 @@ def minibatch_parse(sentences, model, batch_size):
     """
 
     ### YOUR CODE HERE
+    import copy
+    dependencies = []
+    for step in xrange(len(sentences) / batch_size + 1):
+        batch = sentences[batch_size * step : min(len(sentences), batch_size * (step + 1))]
+        partial_parses = [PartialParse(s) for s in batch]
+        unfinished_parses = copy.copy(partial_parses)
+        while len(unfinished_parses) > 0:
+            transitions = model.predict(unfinished_parses)
+
+            # Parse for this step
+            for i, t in enumerate(transitions):
+                unfinished_parses[i].parse_step(t)
+
+            # Check the finish condition
+            for i in reversed(range(len(unfinished_parses))):
+                if len(unfinished_parses[i].stack) == 1 and not unfinished_parses[i].buffer:
+                    del unfinished_parses[i]
+
+        for p in partial_parses:
+            dependencies.append(p.dependencies)
     ### END YOUR CODE
 
     return dependencies
