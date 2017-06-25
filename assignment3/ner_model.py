@@ -74,7 +74,7 @@ class NERModel(Model):
         return token_cm, (p, r, f1)
 
 
-    def run_epoch(self, sess, train_examples, dev_set, train_examples_raw, dev_set_raw):
+    def run_epoch(self, sess, train_examples, dev_set, train_examples_raw, dev_set_raw, eval = False):
         prog = Progbar(target=1 + int(len(train_examples) / self.config.batch_size))
         for i, batch in enumerate(minibatches(train_examples, self.config.batch_size)):
             loss = self.train_on_batch(sess, *batch)
@@ -88,13 +88,15 @@ class NERModel(Model):
         #logger.debug("Token-level scores:\n" + token_cm.summary())
         #logger.info("Entity level P/R/F1: %.2f/%.2f/%.2f", *entity_scores)
 
-        logger.info("Evaluating on development data")
-        token_cm, entity_scores = self.evaluate(sess, dev_set, dev_set_raw)
-        logger.debug("Token-level confusion matrix:\n" + token_cm.as_table())
-        logger.debug("Token-level scores:\n" + token_cm.summary())
-        logger.info("Entity level P/R/F1: %.2f/%.2f/%.2f", *entity_scores)
+        f1 = 0
+        if eval:
+            logger.info("Evaluating on development data")
+            token_cm, entity_scores = self.evaluate(sess, dev_set, dev_set_raw)
+            logger.debug("Token-level confusion matrix:\n" + token_cm.as_table())
+            logger.debug("Token-level scores:\n" + token_cm.summary())
+            logger.info("Entity level P/R/F1: %.2f/%.2f/%.2f", *entity_scores)
 
-        f1 = entity_scores[-1]
+            f1 = entity_scores[-1]
         return f1
 
     def output(self, sess, inputs_raw, inputs=None):
@@ -122,7 +124,7 @@ class NERModel(Model):
 
         for epoch in range(self.config.n_epochs):
             logger.info("Epoch %d out of %d", epoch + 1, self.config.n_epochs)
-            score = self.run_epoch(sess, train_examples, dev_set, train_examples_raw, dev_set_raw)
+            score = self.run_epoch(sess, train_examples, dev_set, train_examples_raw, dev_set_raw, epoch % 10 == 9)
             if score > best_score:
                 best_score = score
                 if saver:

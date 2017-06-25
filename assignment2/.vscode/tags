@@ -21,7 +21,7 @@ ROOT	../utils/parser_utils.py	/^ROOT = '<ROOT>'$/;"	kind:variable	line:19
 SoftmaxModel	../q1_classifier.py	/^class SoftmaxModel(Model):$/;"	kind:class	line:27
 UNK	../utils/parser_utils.py	/^UNK = '<UNK>'$/;"	kind:variable	line:17
 __init__	../q1_classifier.py	/^    def __init__(self, config):$/;"	kind:member	line:181
-__init__	../q2_parser_model.py	/^    def __init__(self, config, pretrained_embeddings):$/;"	kind:member	line:230
+__init__	../q2_parser_model.py	/^    def __init__(self, config, pretrained_embeddings):$/;"	kind:member	line:231
 __init__	../q2_parser_transitions.py	/^    def __init__(self, sentence):$/;"	kind:member	line:2
 __init__	../utils/general_utils.py	/^    def __init__(self, target, width=30, verbose=1):$/;"	kind:member	line:78
 __init__	../utils/parser_utils.py	/^    def __init__(self, dataset):$/;"	kind:member	line:40
@@ -29,19 +29,19 @@ __init__	../utils/parser_utils.py	/^    def __init__(self, parser, dataset, sent
 __init__.py	../utils/__init__.py	1;"	kind:file	line:1
 _xavier_initializer	../q2_initialization.py	/^    def _xavier_initializer(shape, **kwargs):$/;"	kind:function	line:14
 add	../utils/general_utils.py	/^    def add(self, n, values=[]):$/;"	kind:member	line:167
-add_embedding	../q2_parser_model.py	/^    def add_embedding(self):$/;"	kind:member	line:93
+add_embedding	../q2_parser_model.py	/^    def add_embedding(self):$/;"	kind:member	line:94
 add_loss_op	../model.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:51
 add_loss_op	../q1_classifier.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:106
-add_loss_op	../q2_parser_model.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:158
+add_loss_op	../q2_parser_model.py	/^    def add_loss_op(self, pred):$/;"	kind:member	line:159
 add_placeholders	../model.py	/^    def add_placeholders(self):$/;"	kind:member	line:8
 add_placeholders	../q1_classifier.py	/^    def add_placeholders(self):$/;"	kind:member	line:30
 add_placeholders	../q2_parser_model.py	/^    def add_placeholders(self):$/;"	kind:member	line:36
 add_prediction_op	../model.py	/^    def add_prediction_op(self):$/;"	kind:member	line:43
 add_prediction_op	../q1_classifier.py	/^    def add_prediction_op(self):$/;"	kind:member	line:81
-add_prediction_op	../q2_parser_model.py	/^    def add_prediction_op(self):$/;"	kind:member	line:117
+add_prediction_op	../q2_parser_model.py	/^    def add_prediction_op(self):$/;"	kind:member	line:118
 add_training_op	../model.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:61
 add_training_op	../q1_classifier.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:121
-add_training_op	../q2_parser_model.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:176
+add_training_op	../q2_parser_model.py	/^    def add_training_op(self, loss):$/;"	kind:member	line:177
 batch_size	../q1_classifier.py	/^    batch_size = 64$/;"	kind:variable	line:22
 batch_size	../q2_parser_model.py	/^    batch_size = 2048$/;"	kind:variable	line:24
 build	../model.py	/^    def build(self):$/;"	kind:member	line:107
@@ -58,7 +58,7 @@ embed_size	../q2_parser_model.py	/^    embed_size = 50$/;"	kind:variable	line:22
 embedding_file	../utils/parser_utils.py	/^    embedding_file = '.\/data\/en-cw.txt'$/;"	kind:variable	line:34
 extract_features	../utils/parser_utils.py	/^    def extract_features(self, stack, buf, arcs, ex):$/;"	kind:member	line:106
 fit	../q1_classifier.py	/^    def fit(self, sess, inputs, labels):$/;"	kind:member	line:162
-fit	../q2_parser_model.py	/^    def fit(self, sess, saver, parser, train_examples, dev_set):$/;"	kind:member	line:218
+fit	../q2_parser_model.py	/^    def fit(self, sess, saver, parser, train_examples, dev_set):$/;"	kind:member	line:219
 general_utils.py	../utils/general_utils.py	1;"	kind:file	line:1
 get_lc	../utils/parser_utils.py	/^        def get_lc(k):$/;"	kind:function	line:110
 get_minibatches	../utils/general_utils.py	/^def get_minibatches(data, minibatch_size, shuffle=True):$/;"	kind:function	line:6
@@ -73,7 +73,7 @@ logged_loop	../utils/general_utils.py	/^def logged_loop(iterable, n=None):$/;"	k
 lowercase	../utils/parser_utils.py	/^    lowercase = True$/;"	kind:variable	line:26
 lr	../q1_classifier.py	/^    lr = 1e-4$/;"	kind:variable	line:24
 lr	../q2_parser_model.py	/^    lr = 0.001$/;"	kind:variable	line:26
-main	../q2_parser_model.py	/^def main(debug=True):$/;"	kind:function	line:236
+main	../q2_parser_model.py	/^def main(debug=True):$/;"	kind:function	line:237
 minibatch	../utils/general_utils.py	/^def minibatch(data, minibatch_idx):$/;"	kind:function	line:44
 minibatch_parse	../q2_parser_transitions.py	/^def minibatch_parse(sentences, model, batch_size):$/;"	kind:function	line:68
 minibatches	../utils/parser_utils.py	/^def minibatches(data, batch_size):$/;"	kind:function	line:332
@@ -101,7 +101,7 @@ q2_parser_transitions.py	../q2_parser_transitions.py	1;"	kind:file	line:1
 read_conll	../utils/parser_utils.py	/^def read_conll(in_file, lowercase=False, max_example=None):$/;"	kind:function	line:280
 right_arc	../q2_parser_transitions.py	/^        def right_arc(s, b, d):$/;"	kind:function	line:45
 run_epoch	../q1_classifier.py	/^    def run_epoch(self, sess, inputs, labels):$/;"	kind:member	line:146
-run_epoch	../q2_parser_model.py	/^    def run_epoch(self, sess, parser, train_examples, dev_set):$/;"	kind:member	line:207
+run_epoch	../q2_parser_model.py	/^    def run_epoch(self, sess, parser, train_examples, dev_set):$/;"	kind:member	line:208
 shift	../q2_parser_transitions.py	/^        def shift(s, b, d):$/;"	kind:function	line:37
 softmax	../q1_softmax.py	/^def softmax(x):$/;"	kind:function	line:6
 test_all_close	../utils/general_utils.py	/^def test_all_close(name, actual, expected):$/;"	kind:function	line:48
@@ -117,7 +117,7 @@ test_softmax_model	../q1_classifier.py	/^def test_softmax_model():$/;"	kind:func
 test_step	../q2_parser_transitions.py	/^def test_step(name, transition, stack, buf, deps,$/;"	kind:function	line:111
 train_file	../utils/parser_utils.py	/^    train_file = 'train.conll'$/;"	kind:variable	line:31
 train_on_batch	../model.py	/^    def train_on_batch(self, sess, inputs_batch, labels_batch):$/;"	kind:member	line:80
-train_on_batch	../q2_parser_model.py	/^    def train_on_batch(self, sess, inputs_batch, labels_batch):$/;"	kind:member	line:201
+train_on_batch	../q2_parser_model.py	/^    def train_on_batch(self, sess, inputs_batch, labels_batch):$/;"	kind:member	line:202
 unlabeled	../utils/parser_utils.py	/^    unlabeled = True$/;"	kind:variable	line:25
 update	../utils/general_utils.py	/^    def update(self, current, values=[], exact=[]):$/;"	kind:member	line:88
 use_dep	../utils/parser_utils.py	/^    use_dep = True$/;"	kind:variable	line:28

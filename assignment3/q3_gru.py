@@ -87,6 +87,15 @@ class SequencePredictor(Model):
 
         x = self.inputs_placeholder
         ### YOUR CODE HERE (~2-3 lines)
+
+        output, h = tf.nn.dynamic_rnn(
+            cell=cell,
+            inputs=x,
+            dtype=tf.float32   
+        )
+
+        preds = tf.nn.sigmoid(h)
+        
         ### END YOUR CODE
 
         return preds #state # preds
@@ -108,7 +117,7 @@ class SequencePredictor(Model):
         y = self.labels_placeholder
 
         ### YOUR CODE HERE (~1-2 lines)
-
+        loss = tf.reduce_mean(tf.nn.l2_loss(preds - y))
         ### END YOUR CODE
 
         return loss
@@ -144,6 +153,17 @@ class SequencePredictor(Model):
         # is True.
         # - Remember to set self.grad_norm
 
+        
+        trainables = tf.trainable_variables()
+        gradients = tf.gradients(loss, trainables)
+
+        self.grad_norm = tf.global_norm(gradients)
+
+        if self.config.clip_gradients:   
+            gradients, _ = tf.clip_by_global_norm(gradients, clip_norm=self.config.max_grad_norm, use_norm=self.grad_norm)
+            
+        grads_and_vars = zip(gradients, trainables)
+        train_op = optimizer.apply_gradients(grads_and_vars)
         ### END YOUR CODE
 
         assert self.grad_norm is not None, "grad_norm was not set properly!"
@@ -154,6 +174,7 @@ class SequencePredictor(Model):
         This version also returns the norm of gradients.
         """
         feed = self.create_feed_dict(inputs_batch, labels_batch=labels_batch)
+
         _, loss, grad_norm = sess.run([self.train_op, self.loss, self.grad_norm], feed_dict=feed)
         return loss, grad_norm
 
